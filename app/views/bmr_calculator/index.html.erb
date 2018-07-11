@@ -1,0 +1,31 @@
+<div class="col-md-12 col-xs-12 col-sm-12">
+	<%= form_tag calculate_path do %>
+		<div class="row">
+			<span class="col-md-1 col-sm-3 col-xs-6">Age: </span>
+			<span class="col-md-6 col-sm-12 col-xs-12"><%= text_field_tag "age", params[:age], placeholder: 'Enter the age',:class => 'form-control' %></span>
+			<span class="col-md-3 col-sm-6 col-xs-12"> Years </span>
+		</div>
+		<br>
+		<div class="row">
+			<span class="col-md-1 col-sm-3 col-xs-6">Gender: </span>
+			<span class="col-md-3 col-sm-6 col-xs-12">
+				<input type="radio" name="gender" value="male"> Male
+			  <input type="radio" name="gender" value="female"> Female
+			</span>
+		</div>
+		<br>
+		<div class="row">
+			<span class="col-md-1 col-sm-3 col-xs-6">Height: </span>
+			<span class="col-md-6 col-sm-12 col-xs-12"><%= text_field_tag "height", params[:height], placeholder: 'Enter the height',:class => 'form-control' %></span>
+			<span class="col-md-3 col-sm-6 col-xs-12"> in cm </span>
+		</div>
+		<br>
+		<div class="row">
+			<span class="col-md-1 col-sm-3 col-xs-6">Weight: </span>
+			<span class="col-md-6 col-sm-12 col-xs-12"><%= text_field_tag "weight", params[:weight], placeholder: 'Enter the weight',:class => 'form-control' %></span>
+			<span class="col-md-3 col-sm-6 col-xs-12"> in kg </span>
+		</div>
+		<br>
+		<div class="row col-md-3"><%= submit_tag 'Calculate Bmr', :class => 'form-control btn btn-success', :style => 'margin-left: 85%;' %></div>
+	<% end %>
+</div>
